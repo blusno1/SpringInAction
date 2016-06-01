@@ -8,6 +8,6 @@
     </bean>
 
     <bean id="quest" class="blusno.SpringInActionFour.knights.SlayDragonQuest">
-        <constructor-arg value="#(T(System).out)" />
+        <constructor-arg value="#{T(System).out}" />
     </bean>
-</beans>
+</beans>g
