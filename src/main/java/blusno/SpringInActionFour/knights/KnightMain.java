@@ -13,15 +13,17 @@ public class KnightMain {
         /**
          * 通过java config 获取bean
          */
+        KnightConfig config = new KnightConfig();
+
+        config.knight().embarkOnQuest();
+
         /**
-         * KnightConfig config = new KnightConfig();
-         *
-         * config.knight().embarkOnQuest();
+         * 通过xml 获取bean
          */
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/knights.xml");
+        /*ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/knights.xml");
         Knight knight = (Knight) context.getBean(Knight.class);
         knight.embarkOnQuest();
-        context.close();
+        context.close();*/
 
     }
 }
