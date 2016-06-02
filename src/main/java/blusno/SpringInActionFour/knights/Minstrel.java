@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 import java.io.PrintStream;
 
@@ -11,6 +12,7 @@ import java.io.PrintStream;
  * Created by root on 16-6-2.
  */
 @Aspect
+@Component
 public class Minstrel  {
 
     private PrintStream stream;

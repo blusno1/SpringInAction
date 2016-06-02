@@ -2,6 +2,7 @@ package blusno.SpringInActionFour.knights;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
@@ -10,19 +11,18 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @EnableAspectJAutoProxy
+@ComponentScan
 public class KnightConfig {
 
-    @Bean
-    public Knight knight(){
+
+    public @Bean Knight knight(){
         return new BraveKnight(quest());
     }
 
-    @Bean
-    public Quest quest(){
+    public @Bean Quest quest(){
         return new SlayDragonQuest(System.out);
     }
 
-    @Bean
-    public Minstrel minstrel() { return new Minstrel(System.out); }
+    public @Bean Minstrel minstrel() { return new Minstrel(System.out); }
 
 }
